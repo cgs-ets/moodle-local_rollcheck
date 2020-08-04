@@ -6,3 +6,7 @@ Author
 Michael Vangelovski<br/>
 <https://github.com/michaelvangelovski><br/>
 <http://michaelvangelovski.com>
+
+## Screenshots
+
+![Reminder](/screenshots/screenshot.png?raw=true)
