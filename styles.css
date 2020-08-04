@@ -1,0 +1,95 @@
+/* General styling */
+.local_rollcheck {
+    display: block;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.local_rollcheck .overlay {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+.local_rollcheck .popup {
+    background: #fff;
+    position: fixed;
+    top: 120px;
+    left: 5%;
+    text-align: center;
+    padding: 20px;
+    z-index: 10001;
+    width: 90%;
+}
+
+@media only screen and (min-width: 650px)  {
+    .local_rollcheck .popup {
+        width: 600px;
+        left: 50%;
+        margin-left: -300px;
+    }
+}
+
+.local_rollcheck .popup a {
+    display: inline-block;
+    margin: 5px 3px;
+}
+
+.local_rollcheck .message {
+    font-size: 1.2rem;
+    color: #001;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin: 15px 20px 20px;
+}
+.local_rollcheck.submitting .popup {
+    opacity: 0.9;
+}
+
+/* Helpers */
+.local_rollcheck .spinner {
+    display: none;
+    padding: 0;
+    width: 25px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+.local_rollcheck .spinner .circle {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top-color: #595959;
+    border-left-color: #595959;
+    text-indent: -9999px;
+    margin: 0 auto;
+}
+.local_rollcheck.submitting .spinner {
+    display: block;
+}
+.local_rollcheck .spin {
+    -webkit-animation: bmospin 0.4s linear 0s infinite;
+    -moz-animation: bmospin 0.4s linear 0s infinite;
+    -o-animation: bmospin 0.4s linear 0s infinite;
+    animation: bmospin 0.4s linear 0s infinite;
+}
+@-webkit-keyframes bmospin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes bmospin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@keyframes bmospin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
