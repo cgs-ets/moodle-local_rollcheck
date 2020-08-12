@@ -23,5 +23,5 @@
  */
 defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'local_rollcheck';
-$plugin->version = 2020080400;
+$plugin->version = 2020080401;
 $plugin->requires = 2010112400;

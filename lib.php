@@ -27,6 +27,10 @@ function local_rollcheck_extend_navigation(global_navigation $nav) {
 
     $config = get_config('local_rollcheck');
 
+    if (isset($config->globaldisable) && $config->globaldisable) {
+        return;
+    }
+
     if (local_rollcheck_config_missing()) {
         return;
     }

@@ -28,6 +28,13 @@ if ($hassiteconfig) {
     $settings = new admin_settingpage('local_rollcheck', get_string('pluginname', 'local_rollcheck'));
     $ADMIN->add('localplugins', $settings);
 
+    // Global Enable/Disable.
+    $name = 'local_rollcheck/globaldisable';
+    $title = get_string('config:globaldisable', 'local_rollcheck');
+    $description = get_string('config:globaldisabledesc', 'local_rollcheck');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $settings->add($setting);
+
     // DB connection used to map Moodle course idnumbers to external system course codes.
     $settings->add(new admin_setting_heading(
         'local_rollcheck_mappingexdbheader', 

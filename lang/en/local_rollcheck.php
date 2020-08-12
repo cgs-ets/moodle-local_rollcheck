@@ -25,6 +25,9 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Roll Check';
 $string['rollcheck'] = 'Roll Check';
 
+$string['config:globaldisable'] = 'Disable rollcheck';
+$string['config:globaldisabledesc'] = 'Tick this setting if you want to disable the rollcheck plugin from running.';
+
 $string['config:missingsettings'] = 'You are missing setting configurations for the "Roll Check" plugin.';
 
 $string['config:mappingsettingsheaderdb'] = 'Course code mapping database settings';
