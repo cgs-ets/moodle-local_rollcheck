@@ -30,7 +30,7 @@ $functions = [
         'classpath'   => '',
         'description' => 'Checks whether staff member needs to mark the roll',
         'type'        => 'read',
-        'loginrequired' => true,
+        'loginrequired' => false,
         'ajax' => true,
     ],
     'local_rollcheck_save_response' => [

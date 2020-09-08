@@ -38,6 +38,11 @@ function check_roll_for_course() {
         'url' => '',
     );
 
+    // Check whether user is logged in.
+    if (!isloggedin()) {
+        return $data;
+    }
+
     // If user is impersonating another, don't show the popup.
     if (\core\session\manager::is_loggedinas()) {
         $data['result'] = 'impersonating';
