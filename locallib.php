@@ -40,6 +40,7 @@ function check_roll_for_course() {
 
     // Check whether user is logged in.
     if (!isloggedin()) {
+        $data['result'] = 'notloggedin';
         return $data;
     }
 
